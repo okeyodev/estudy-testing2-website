@@ -1,0 +1,44 @@
+@import url(variable.css);
+
+/* Library */
+.library-grid {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 24px;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.library-card {
+  padding: 32px 28px;
+  text-align: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition: all .3s;
+}
+
+.library-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.library-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 18px;
+  background: var(--blue);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
+}
+
+.library-card h3 {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}

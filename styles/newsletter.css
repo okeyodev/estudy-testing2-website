@@ -1,0 +1,79 @@
+@import url(variable.css);
+
+/* Newsletter */
+.newsletter {
+  background: var(--navy);
+  color: white;
+  padding: 64px 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+body.dark .newsletter {
+  background: #0f172a;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.newsletter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 50%, rgba(59, 131, 246, 0.348), transparent 50%), radial-gradient(circle at 80% 30%, rgba(138, 92, 246, 0.137), transparent 40%);
+  z-index: 0;
+}
+
+.newsletter .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.newsletter h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.newsletter p {
+  opacity: .85;
+  margin-top: 6px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  min-width: 380px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 13px 16px;
+  border-radius: 11px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .08);
+  color: white;
+  backdrop-filter: blur(8px);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all .2s;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, .6);
+}
+
+.newsletter-form input:focus {
+  border-color: rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .12);
+}
+
+.newsletter-form button {
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}

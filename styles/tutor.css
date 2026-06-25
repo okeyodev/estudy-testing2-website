@@ -1,0 +1,210 @@
+@import url(variable.css);
+
+/* Tutor */
+.tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.tutor-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all .35s cubic-bezier(.2, .8, .2, 1);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+}
+
+.tutor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(44, 82, 249, 0.15);
+}
+
+.tutor-card .card-image {
+  height: 250px;
+  /* same height as your original color block */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  /* stops it from growing and covering body */
+}
+
+.tutor-card .card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover; /* fills horizontally & vertically, crops like background-size:cover */
+  object-position: center;
+  display: block;
+  z-index: 1; /* behind the tag */
+}
+
+/* keep tag visible on top */
+.tutor-card .card-image .tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+/* optional: keep the subtle dark fade but behind tag */
+.tutor-card .card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent 60%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+body.dark .tutor-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.932);
+}
+
+.card-image {
+  /* height: 168px; */
+  /* max-width: 100px; */
+  position: relative;
+  padding: 14px;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 60%);
+}
+
+.tag {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, .55);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 5px 11px;
+  border-radius: 7px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.instructor {
+  color: var(--text-muted);
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.badge-video {
+  padding: 4px 9px;
+  background: rgba(59, 130, 246, .1);
+  color: #2563eb;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: .72rem;
+  border: 1px solid rgba(59, 130, 246, .15);
+}
+
+body.dark .badge-video {
+  background: rgba(59, 130, 246, .18);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, .25);
+}
+
+.btn-preview {
+  margin-top: auto;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+  color: var(--text);
+}
+
+.btn-preview:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .2s;
+  font-size: 0.9rem;
+}
+
+.filter-pill.active,
+.filter-pill:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+body.dark .filter-pill.active {
+  background: white;
+  color: #0f172a;
+  border-color: white;
+}

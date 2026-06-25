@@ -1,0 +1,53 @@
+
+
+/* 1. Base state: Hidden and shifted down */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  /* Creates the distinct upward travel path */
+
+  /* Modern easing: starts fast, slows down with a gentle glide */
+  transition:
+    opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+  will-change: transform, opacity;
+  /* Ensures 60fps hardware acceleration */
+}
+
+/* 2. Active state: Smoothly transitions into view */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(20px, -30px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-15px, 20px) scale(0.95);
+  }
+}
+
+
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1
+  }
+
+  51%,
+  100% {
+    opacity: 0
+  }
+}

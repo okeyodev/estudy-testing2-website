@@ -1,0 +1,214 @@
+@import url(variable.css);
+
+/* Responsive */
+@media (max-width: 575.95px) {
+  .container {
+    padding: 0 18px;
+    overflow: hidden;
+  }
+
+  .hero .container {
+    gap: 36px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-lg {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fcard-stack {
+    height: 340px;
+    transform: scale(0.9);
+  }
+
+  .features-grid {
+    display: flex;
+    flex-direction: column;
+  } 
+
+  .trust {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav-links,
+  .nav-actions .btn-ghost,
+  .nav-actions .btn-primary {
+    display: none;
+  }
+    
+  .nav-links,
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: grid;
+  }
+
+  .hero {
+    padding: 88px 0 64px;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+  }
+
+  .trust-badges {
+    gap: 16px;
+    margin-top: 52px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 0;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .tutors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .library-grid,
+  .features-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .newsletter .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .webinar-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .testimonial-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 0 60px;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    order: 1;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas,
+  .trust {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    order: 2;
+    min-height: auto;
+  }
+
+  .fcard-stack {
+    height: 380px;
+    max-width: 360px;
+  }
+
+  .fcard {
+    width: 290px;
+    height: 185px;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .fcard-1 {
+    top: 20px;
+    left: 5px;
+  }
+
+  .fcard-2 {
+    top: 120px;
+    right: 0;
+  }
+
+  .fcard-3 {
+    bottom: 15px;
+    left: 30px;
+  }
+
+  /* .library-grid {
+    grid-template-rows: repeat(1fr 1fr);
+  } */
+}
+
+@media (max-width: 1024px) {
+  .webinars-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .conference-card {
+    position: static;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-brand {
+    grid-column: 1/-1;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,69 @@
+@import url(variable.css);
+
+/* Testimonials */
+.testimonial-slider {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+
+.testimonial {
+  min-width: 100%;
+  padding: 20px 30px 10px;
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 26px;
+  letter-spacing: -0.01em;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 650;
+  font-size: 0.95rem;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.dot.active {
+  width: 26px;
+  border-radius: 4px;
+  background: #3b82f6;
+}
