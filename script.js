@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typeOld();
   }
 
-  // ===== COURSE FILTERS - original =====
+  // ===== TUTOR FILTERS - original =====
   const pills = document.querySelectorAll(".filter-pill");
   const cards = document.querySelectorAll(".tutor-card");
   pills.forEach((p) =>
@@ -173,17 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => go((idx + 1) % slides.length), 5200);
   }
 
-  // ===== BILLING TOGGLE - original =====
-  const billing = document.getElementById("billingToggle");
-  const prices = document.querySelectorAll(".price[data-monthly]");
-  if (billing) {
-    billing.addEventListener("change", () => {
-      const yearly = billing.checked;
-      prices.forEach((p) => {
-        p.textContent = "₦" + (yearly ? p.dataset.yearly : p.dataset.monthly);
-      });
-    });
-  }
 
   // ===== FAQ ACCORDION - original =====
   document.querySelectorAll(".faq-q").forEach((btn) => {
